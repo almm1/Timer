@@ -36,9 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 if (b){
-                    maxTime = i;
-                    maxTime/=1000;
-                    maxTime*=1000;
+                    maxTime = i/1000*1000;
                     sec = (i/1000)%60;
                     min = (i/1000)/60;
                     minS = ""+min;
